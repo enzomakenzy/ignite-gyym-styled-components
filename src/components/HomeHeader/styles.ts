@@ -22,7 +22,7 @@ export const InfoUserContainer = styled.View`
 export const HelloText = styled.Text`
   ${({ theme }) => css`
     color: ${ theme.COLORS.GRAY[100] };
-    font-size: ${ theme.FONTSIZES.MD };
+    font-size: ${ theme.FONTSIZES.MD }px;
   `};
 `;
 
