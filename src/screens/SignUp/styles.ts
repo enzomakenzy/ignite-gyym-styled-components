@@ -10,7 +10,7 @@ export const PeopleTrainingImage = styled.Image`
 `;
 
 export const LogoContainer = styled.View`
-  margin: 128px 0px;
+  margin: 100px 0px;
   align-items: center;
 `;
 
@@ -24,8 +24,8 @@ export const Title = styled.Text`
 
 export const FormContainer = styled.View`
   width: 100%;
-  align-items: center;
-  margin-bottom: 140px;
+  flex: 1;
+  margin-bottom: 40px;
 `;
 
 export const FormTitle = styled.Text`
@@ -35,6 +35,7 @@ export const FormTitle = styled.Text`
     font-family: ${theme.FONTS.HEADING};
   `};
   margin-bottom: 20px;
+  text-align: center;
 `;
 
 export const ToSignUpTitle = styled.Text`
@@ -45,4 +46,3 @@ export const ToSignUpTitle = styled.Text`
   `};
   text-align: center;
 `;
-

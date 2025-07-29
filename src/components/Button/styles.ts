@@ -18,7 +18,7 @@ export const GymButton = styled.TouchableOpacity.attrs({
     };
     border-color: ${ isVariant ? theme.COLORS.GREEN[700] : "" };
   `};
-    height: 64px;
+    height: 52px;
     border-radius: 6px;
     border-style: solid;
     width: 100%;

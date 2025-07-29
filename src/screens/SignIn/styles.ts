@@ -10,7 +10,7 @@ export const PeopleTrainingImage = styled.Image`
 `;
 
 export const LogoContainer = styled.View`
-  margin: 128px 0px;
+  margin: 100px 0px;
   align-items: center;
 `;
 
@@ -25,6 +25,7 @@ export const Title = styled.Text`
 export const FormContainer = styled.View`
   width: 100%;
   align-items: center;
+  flex: 1;
 `;
 
 export const FormTitle = styled.Text`
@@ -38,7 +39,7 @@ export const FormTitle = styled.Text`
 
 export const ToSignUpContainer = styled.View`
   margin-top: 180px;
-  margin-bottom: 64px;
+  margin-bottom: 41px;
 `;
 
 export const ToSignUpTitle = styled.Text`

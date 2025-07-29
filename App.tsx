@@ -6,6 +6,7 @@ import theme from '@themes/MainTheme';
 import { ThemeProvider } from 'styled-components';
 import { Routes } from '@routes/index';
 import { Loading } from '@components/Loading';
+import { AuthContext, AuthContextProvider } from '@contexts/AuthContext';
 
 export default function App() {
   const [ fontsLoaded ] = useFonts({ Roboto_400Regular, Roboto_700Bold });
@@ -18,7 +19,9 @@ export default function App() {
         translucent
       />
       
-      { fontsLoaded ? <Routes /> : <Loading /> }
+      <AuthContextProvider>
+        { fontsLoaded ? <Routes /> : <Loading /> }
+      </AuthContextProvider>
     </ThemeProvider>
   );
 }

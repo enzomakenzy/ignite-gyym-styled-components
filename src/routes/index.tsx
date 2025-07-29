@@ -4,18 +4,24 @@ import { AppRoutes } from "./app.routes";
 
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
+import { useAuth } from "src/hooks/useAuth";
+
 import styled, { useTheme } from "styled-components/native";
+import { useContext } from "react";
 
 export function Routes() {
   const theme = useTheme();
   const themeNavigation = DefaultTheme;
   themeNavigation.colors.background = theme.COLORS.GRAY[700];
 
+  const contextData = useAuth();
+  console.log("Usuário logado => ", contextData);
+
   return (
     <SafeAreaProvider>
       <Box>
         <NavigationContainer theme={themeNavigation}>
-          <AppRoutes />
+          <AuthRoutes />
         </NavigationContainer>
       </Box>
     </SafeAreaProvider>
