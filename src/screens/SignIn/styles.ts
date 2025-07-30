@@ -24,7 +24,6 @@ export const Title = styled.Text`
 
 export const FormContainer = styled.View`
   width: 100%;
-  align-items: center;
   flex: 1;
 `;
 
@@ -35,6 +34,7 @@ export const FormTitle = styled.Text`
     font-family: ${theme.FONTS.HEADING};
   `};
   margin-bottom: 20px;
+  text-align: center;
 `;
 
 export const ToSignUpContainer = styled.View`

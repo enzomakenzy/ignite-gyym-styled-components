@@ -4,9 +4,14 @@ import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/
 
 import theme from '@themes/MainTheme';
 import { ThemeProvider } from 'styled-components';
+
 import { Routes } from '@routes/index';
+
 import { Loading } from '@components/Loading';
-import { AuthContext, AuthContextProvider } from '@contexts/AuthContext';
+
+import { AuthContextProvider } from '@contexts/AuthContext';
+
+import Toast from 'react-native-toast-message';
 
 export default function App() {
   const [ fontsLoaded ] = useFonts({ Roboto_400Regular, Roboto_700Bold });
@@ -22,6 +27,7 @@ export default function App() {
       <AuthContextProvider>
         { fontsLoaded ? <Routes /> : <Loading /> }
       </AuthContextProvider>
+      <Toast />
     </ThemeProvider>
   );
 }

@@ -7,7 +7,7 @@ export const Container = styled.View`
 export const HeaderList = styled.Text`
   ${({ theme }) => css`
     color: ${ theme.COLORS.GRAY[200] };
-    font-size: ${ theme.FONTSIZES.MD };
+    font-size: ${ theme.FONTSIZES.MD }px;
   `}
   margin-top: 40px;
   margin-bottom: 12px;

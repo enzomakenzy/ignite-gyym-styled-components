@@ -1,20 +1,25 @@
-import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+import { Alert } from "react-native";
+
 import { Container, FormContainer, FormTitle, LogoContainer, PeopleTrainingImage, Title } from "./styles";
+
 import { useNavigation } from "@react-navigation/native";
 import { AuthNavigatorRoutesProps } from "@routes/auth.routes";
+
 import { Input } from "@components/Input";
 import { Button } from "@components/Button";
 
 import LogoSvg from "@assets/logo.svg";
 import BackgroundImg from "@assets/background.png"
 
-import { useForm } from "react-hook-form";
-import { Controller } from "react-hook-form";
+import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+
+import { useForm, Controller } from "react-hook-form";
 import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod";
+
 import { api } from "src/services/api";
 import axios from "axios";
-import { Alert } from "react-native";
+
 
 type FormDataProps = {
   name: string;
@@ -23,8 +28,7 @@ type FormDataProps = {
   passwordConfirm: string;
 }
 
-const signUpFormSchema = z
-  .object({
+const signUpFormSchema = z.object({
     name: z.string({ error: "Informe o nome" }),
     email: z.email({ error: "Informe o e-mail" }),
     password: z.string({error: "Informe a senha." }).min(6, "A senha deve ter pelo menos 6 digitos"),
@@ -85,9 +89,6 @@ export function SignUp() {
           <Controller 
             control={control}
             name="name"
-            rules={{
-              required: "Informe o nome"
-            }}
             render={(({ field: { onChange, value } }) => (
               <Input 
                 placeholder="Nome" 
@@ -101,9 +102,6 @@ export function SignUp() {
           <Controller 
             control={control}
             name="email"
-            rules={{
-              required: "Informe o e-mail"
-            }}
             render={(({ field: { onChange, value } }) => (
               <Input 
                 placeholder="E-mail" 

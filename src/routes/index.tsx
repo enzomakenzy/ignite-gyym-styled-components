@@ -14,8 +14,8 @@ export function Routes() {
   const themeNavigation = DefaultTheme;
   themeNavigation.colors.background = theme.COLORS.GRAY[700];
 
-  const contextData = useAuth();
-  console.log("Usuário logado => ", contextData);
+  const { user } = useAuth();
+  console.log("Usuário logado => ", user);
 
   return (
     <SafeAreaProvider>
